@@ -108,6 +108,8 @@ class Beam:
         if check_bound(self.rct) == (True, True):
             self.rct.move_ip(self.vx, self.vy)
             screen.blit(self.img, self.rct)    
+
+
 class Score:
     """
     点数に関するクラス
@@ -120,6 +122,7 @@ class Score:
     def update(self, screen: pg.Surface):
         self.img = self.fonto.render("Score:" + str(self.score), 0, (0, 0, 255))
         screen.blit(self.img, [100, HEIGHT-50])
+        
 
 class Bomb:
     """
